@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+</head>
+<body>
+   <h1> Ingrese un número.(-1 para finalizar)</h1>
+    <div class="caja">
+       <input type="number" id="num"><br>
+       <input type="submit" onclick="numeros()">
+    </div> 
+</body>
+</html>
+<script>
+    function numeros(){
+        let num = document.getElementById("num").value;
+        var menor=99999999999;
+        var mayor=-22222222;
+        var suma =0;
+        while (num != -1 )
+          {
+            if (num> mayor) {
+                //consulta para saber el mayor número
+                mayor=num;
+            }
+            if (num< menor) {
+                //consulta para saber el mayor número
+                menor=num;
+            }
+            suma=parseInt(suma)+parseInt(num);
+            num=prompt("Ingrese un número.(-1 para finalizar)");     
+          }  
+          alert("Mayor número introducido:"+mayor+"\nMenor número introducido:"+menor+"\nsuma de todos los números:"+suma);
+    }
+</script>
